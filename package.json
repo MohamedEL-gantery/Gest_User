@@ -9,17 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "chalk": "^5.4.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cookies-next": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "next": "15.2.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.1"
+    "reflect-metadata": "^0.2.2",
+    "ua-parser-js": "^2.0.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/mongoose": "^5.11.96",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "@types/webpack": "^5.28.5",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5",
+    "webpack": "^5.98.0"
   }
 }
