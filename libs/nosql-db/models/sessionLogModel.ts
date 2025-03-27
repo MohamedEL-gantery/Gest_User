@@ -38,6 +38,9 @@ const sessionLogSchema = new Schema<SessionLog>(
   },
   {
     timestamps: true,
+    // to enable virtual populate
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 

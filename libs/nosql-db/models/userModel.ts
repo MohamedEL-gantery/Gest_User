@@ -25,7 +25,5 @@ const userSchema = new Schema<User>(
   }
 );
 
-userSchema.index({ expires: 1 }, { expireAfterSeconds: 0 });
-
 export const UserModel =
   mongoose.models.User || model<User>("User", userSchema);

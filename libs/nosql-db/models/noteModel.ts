@@ -10,6 +10,9 @@ const noteSchema = new Schema<Note>(
   },
   {
     timestamps: true,
+    // to enable virtual populate
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 

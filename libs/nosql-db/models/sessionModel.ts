@@ -10,12 +10,21 @@ const sessionSchema = new Schema<Session>(
   },
   {
     timestamps: true,
+    // to enable virtual populate
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 
 sessionSchema.index({ userId: 1 });
 sessionSchema.index({ refreshTokenHash: 1 });
 sessionSchema.index({ accessTokenHash: 1 });
+
+sessionSchema.virtual("user", {
+  ref: "User",
+  localField: "userId",
+  foreignField: "_id",
+});
 
 export const SessionModel =
   mongoose.models.Session || model<Session>("Session", sessionSchema);
